@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>統聯客運</title>
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <div class="row">
+        <div class="container">
+            <a onclick="myFunction()">
+                <img src="imgs/LOGO.png"  alt="Logo" width="350px" style="padding-right: 50px">
+            </a>
+            <script>
+                function myFunction() {
+                    var yes = confirm("您目前尚未完成訂票作業\n確定要退出此頁面？\n退出後將重新購票");
+                    if (yes) {
+                        window.location.href = "https://www.ubus.com.tw/";
+                    }
+                }
+            </script>
+        </div>
+        <img src="imgs/slogan.png" alt="Slogan" width="520px">
+    </div>
+
+</section>
+
+<section class="container">
+    <div>
+
+        
+    </div>
+</section>
+</body>
+</html>
