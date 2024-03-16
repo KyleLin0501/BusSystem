@@ -15,6 +15,28 @@
             align-items: center;
             justify-content: center;
         }
+        .overlay {
+            position: absolute;
+            top: 300px;
+            left: 0;
+            z-index: 1;
+        }
+        @keyframes moveRight {
+            from {
+                transform: translateX(-500px);
+            }
+            to {
+                transform: translateX(calc(200vw - 500px));
+            }
+        }
+        .moving-image {
+            position: absolute;
+            top: 320px;
+            left: 0;
+            width: 500px;
+            height: 150px;
+            animation: moveRight 5s linear infinite;
+        }
     </style>
 </head>
 <body>
@@ -40,9 +62,13 @@
 
 <section class="container">
     <div>
-
-        
+        <h1>請稍等！我先接送其他乘客，請稍待片刻</h1>
     </div>
+</section>
+<section>
+
+    <img src="imgs/road.png" alt="road" class="overlay" width="1920" height="200">
+    <img src="imgs/bus.png" alt="bus" class="overlay moving-image">
 </section>
 </body>
 </html>
