@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>統聯客運</title>
     <style>
+        .body-bg {
+            height:84%;
+            margin:0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color:rgb(240,255,155);
+            position:relative;
+            overflow:hidden;
+        }
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -17,7 +28,6 @@
         }
         .overlay {
             position: absolute;
-            top: 300px;
             left: 0;
             z-index: 1;
         }
@@ -26,16 +36,38 @@
                 transform: translateX(-500px);
             }
             to {
-                transform: translateX(calc(200vw - 500px));
+                transform: translateX(calc(2000px));
             }
         }
         .moving-image {
             position: absolute;
-            top: 320px;
+            top: 250px;
             left: 0;
             width: 500px;
             height: 150px;
             animation: moveRight 5s linear infinite;
+        }
+        .button {
+            border: none;
+            color: white;
+            background-color: green;
+            padding: 8px 10px 8px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 2px 2px;
+            cursor: pointer;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: 2px solid white ;
+        }
+        .button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
         }
     </style>
 </head>
@@ -55,20 +87,36 @@
                 }
             </script>
         </div>
-        <img src="imgs/slogan.png" alt="Slogan" width="520px">
+        <img src="imgs/slogan.png" alt="Slogan" width="520">
     </div>
 
 </section>
 
-<section class="container">
+<section class="container body-bg overlay">
     <div>
-        <h1>請稍等！我先接送其他乘客，請稍待片刻</h1>
+        <div class="row">
+            <h1 style="font-size: 40px; text-align: center;">請稍等！為提高服務品質，請稍待片刻，將有專人為您服務～～</h1>
+        </div>
+        <img src="imgs/road.png" alt="road" width="1920" height="200">
+        <img src="imgs/bus.png" alt="bus" class="moving-image">
+    </div>
+        <div>
+            <ul class="row">
+                <h1 style="margin-right: 100px;">國道客服專線：0800-241560</h1>
+                <a href="https://www.facebook.com/ubus.tw/" class="button">
+                    <img src="imgs/fb.png" alt="fb" width="30">
+                </a>
+                <a href="https://www.facebook.com/ubus.tw/" class="button">
+                    <img src="imgs/ig.png" alt="ig" width="30">
+                </a>
+                <a href="https://www.facebook.com/ubus.tw/" class="button">
+                    <img src="imgs/line.png" alt="line" width="30">
+                </a>
+
+            </ul>
     </div>
 </section>
-<section>
 
-    <img src="imgs/road.png" alt="road" class="overlay" width="1920" height="200">
-    <img src="imgs/bus.png" alt="bus" class="overlay moving-image">
-</section>
+
 </body>
 </html>
